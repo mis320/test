@@ -1,0 +1,19 @@
+.concent {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+@media (max-width: 500px) {
+    .concent {
+        padding-top: 15px !important; 
+        gap: 10px !important;
+    }
+}
+.inputBox {
+    position: relative;
+    width: 300px;
+}

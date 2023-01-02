@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Input Text Animation</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="contents.css">
+	<link rel="stylesheet" href="headers.css">
+</head>
+
+<body>
+
+	<div class="header">
+		<div>
+		</div>
+		<div id="header_right">
+			<button class="chainId">
+				<p id="chain"> BSC</p>
+			</button>
+			<button class="walletAccount">
+				<p id="msg"> 0x00****0000</p>
+			</button>
+		</div>
+	</div>
+
+
+	<div class="concent">
+		<div style=" 
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+
+		
+    max-width: 427px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 1rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+		">
+			<div class="inputBox extend">
+				<svg style=" cursor: pointer;" onclick="kdisp()" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="sc-fMiknA kNloxr">
+					<circle cx="12" cy="12" r="3"></circle>
+					<path
+						d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+					</path>
+				</svg>
+			</div>
+			<div class="inputBox">
+				<input type="text" required="required" placeholder="0.0" onkeyup="
+				//小数
+				value=value.replace(/[^\d.]/g,'') 
+				if (value.indexOf(`.`)!= value.lastIndexOf(`.`)) {
+					console.log(value.indexOf(`.`));
+					console.log(value.lastIndexOf(`.`));
+					str0 = value.slice(0,value.indexOf(`.`)+1)
+					str1 = value.slice(value.indexOf(`.`)+1)
+					str1= str1.replace(/\./g,'') 
+					value = str0+str1
+					console.log(str0+str1);
+				}
+				">
+				<span>输入</span>
+			</div>
+			<div class="inputBox">
+				<input type="text" required="required" placeholder="0.0" onkeyup="
+					value=value.replace(/[^\d.]/g,'') 
+				if (value.indexOf(`.`)!= value.lastIndexOf(`.`)) {
+					console.log(value.indexOf(`.`));
+					console.log(value.lastIndexOf(`.`));
+					str0 = value.slice(0,value.indexOf(`.`)+1)
+					str1 = value.slice(value.indexOf(`.`)+1)
+					str1= str1.replace(/\./g,'') 
+					value = str0+str1
+					console.log(str0+str1);
+				}
+				">
+				<span>输出</span>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>

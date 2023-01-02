@@ -1,0 +1,50 @@
+input {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.inputBox input {
+	padding: 10px 10px;
+	outline: none;
+	border-radius: 10px;
+	width: 100%;
+	border: 2px solid #00dfc4;
+	font-size: 1em;
+	transition: 0.5s;
+}
+.inputBox span {
+	position: absolute;
+	left: 0;
+	padding: 10px 10px;
+	pointer-events: none;
+	font-size: 1em;
+	transition: 0.5s;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.25);
+	color: #00dfc4;
+	font-size: 0.65em;
+	transform: translateX(10px) translateY(-7px);
+	padding: 0 5px;
+	background: #1d2b3a;
+	border-left: 1px solid #00dfc4;
+	border-right: 1px solid #00dfc4;
+	letter-spacing: 0.2em;
+}
+.inputBox input:valid,
+.inputBox input:focus {
+	border: 3.5px solid #00dfc4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
