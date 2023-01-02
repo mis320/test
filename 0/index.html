@@ -3,14 +3,16 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Input Text Animation</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="contents.css">
 	<link rel="stylesheet" href="headers.css">
+	<link rel="stylesheet" href="extendhtmls.css">
 </head>
 
 <body>
-
 	<div class="header">
 		<div>
 		</div>
@@ -25,31 +27,36 @@
 	</div>
 
 
-	<div class="concent">
+	<div class="concent" id="concent">
 		<div style=" 
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		justify-content: center;
 		align-items: center;
-
+	
 		
-    max-width: 427px;
-    width: 100%;
-    border-radius: 30px;
-    padding: 1rem;
-    background: rgb(255, 255, 255);
-    box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
+	max-width: 427px;
+	width: 90%;
+	border-radius: 30px;
+	padding: 1rem;
+	background: rgb(255, 255, 255);
+	box-shadow: rgb(0 0 0 / 1%) 0px 0px 1px, rgb(0 0 0 / 4%) 0px 4px 8px, rgb(0 0 0 / 4%) 0px 16px 24px, rgb(0 0 0 / 1%) 0px 24px 32px;
 		">
 			<div class="inputBox extend">
-				<svg style=" cursor: pointer;" onclick="kdisp()" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				<svg style=" cursor: pointer;" onclick="extendDisplayF()" width="24" height="24" viewBox="0 0 24 24"
+					fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 					class="sc-fMiknA kNloxr">
 					<circle cx="12" cy="12" r="3"></circle>
 					<path
 						d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
 					</path>
 				</svg>
+
+
+
+
+
 			</div>
 			<div class="inputBox">
 				<input type="text" required="required" placeholder="0.0" onkeyup="
@@ -81,12 +88,90 @@
 				}
 				">
 				<span>输出</span>
+				<div style="display: flex;">
+					<button id="approve" onclick="approve()" class="outButton" disabled> 授权</button>
+					<button onclick="swap()" class="outButton"> 兑换</button>
+				</div>
+
+
 			</div>
 		</div>
 	</div>
 
 
 
+
+	<div id="extendDisplay" style="display: none;">
+		<div class="extendHtml">
+
+			<div class="extendHtmlSet">
+				<div style="
+					display: flex;
+					flex-direction: row;
+					align-content: center;
+					justify-content: space-between;
+					align-items: center;
+				">
+					<span>配置</span>
+					<div style="cursor: pointer;" onclick="extendDisplayF()">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="sc-kAzzGY gUMQSg pointer">
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
+
+<script>
+
+	const extendDisplayF = () => {
+		let listUl = document.getElementById(`extendDisplay`);
+		if (listUl.style.display === 'block') {
+			listUl.style.display = 'none';
+		} else {
+			listUl.style.display = 'block';
+		}
+	}
+
+</script>
+
+
+<script>
+
+
+	function $set(p1, p2) {
+		let t = document.getElementById(p1);
+		if (
+			t.nodeName.toUpperCase() == 'SPAN' ||
+			t.nodeName.toUpperCase() == 'P'
+
+		) {
+			t.innerHTML = p2
+		} else if (t.nodeName.toUpperCase() == 'IMG') {
+			t.src = p2
+		} else {
+			t.value = p2
+		}
+
+	}
+	function $get(p1) {
+		let t = document.getElementById(p1);
+
+		if (t.nodeName.toUpperCase() != 'SPAN') {
+			return t.value
+		} else {
+			return t.innerHTML
+		}
+
+	}
+</script>
